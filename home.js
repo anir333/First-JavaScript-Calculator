@@ -380,7 +380,7 @@ function operandClicked(operand) {
         content = result;
     }
 
-    reassignResult(Math.round(content * 100) / 1000);
+    reassignResult(content);
 }
 
 
@@ -419,6 +419,6 @@ EQUAL.onclick = function() {
         // operation.push(result);
         content = result;
         console.log(operation);
-        reassignResult(Math.round(content * 100) / 1000);
+        reassignResult(content);
     }
 }

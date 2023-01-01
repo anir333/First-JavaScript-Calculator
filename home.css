@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.calculator {
+    border: solid gray 1px;
+    height: auto;
+    width: 350px;
+    background-color: rgb(61, 57, 57);
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.calculator #result {
+    text-align: right;
+    /* color: white;
+    background-color: aliceblue; */
+}
+.all-buttons {
+    text-align: center;
+    background-color: gray;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.calculator .content-calculator {
+    margin-top: 50%;
+}
+/*.content-calculator {
+    background-color: grey;
+}*/
+.calculator .content-calculator .all-buttons div {
+    display: flex;
+    gap: 4px;
+    /* justify-content: space-around; */
+}
+.calculator .content-calculator .all-buttons div button {
+    /* padding: 30px; */
+    background-color: grey;
+    color: white;
+    font-size: 30px;
+    flex-basis: 25%;
+    height: 80px;
+    gap: 13px;
+}
+.calculator .content-calculator .all-buttons .buttons-row5 #n0-button {
+    flex-basis: 51.4%;
+    border-bottom-left-radius: 50px;
+}
+.calculator .content-calculator .all-buttons .buttons-row5 #equal-button {
+    border-bottom-right-radius: 50px;
+}
+
+.calculator .content-calculator .result {
+    color: white;
+    margin-bottom: 13px;
+    margin-right: 13px;
+    font-size: 70px;
+    overflow-x: scroll;
+}

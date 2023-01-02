@@ -260,6 +260,7 @@ function AC() {
         content = "0";
         operation = []
         reassignResult(content);
+        OPERATION_SHOW.innerHTML = "";
     }
 }
 AC()
@@ -338,6 +339,7 @@ let firstNum = operation[0];
 let operationOperand = operation[1];
 let secondNum = operation[2];
 let result;
+let barLine = "";
 
 function operandClicked(operand) {
     operation.push(content);
@@ -352,13 +354,19 @@ function operandClicked(operand) {
             operation.push(operand);
             console.log(operation);
         }
+        // barLine = operation[0], " ", operation[1];
+        printOperation(operation[0] + " " + operation[1]);
     } else if (operation.length == 3) {
+        // barLine = " ", operation[2];
+        // printOperation(operation[2]);
+
+        secondNum = operation[2];
+        printOperation(" " + operation[2] + " " + operand);
         content = "0";
         reassignResult(content);
         firstNum = operation[0];
         operationOperand = operation[1];
-        secondNum = operation[2];
-        
+
         // Calculating result //
         if (operationOperand === PLUS_SIGN) {
             result = parseFloat(firstNum) + parseFloat(secondNum);
@@ -377,6 +385,7 @@ function operandClicked(operand) {
         operation = [];
         operation.push(result);
         operation.push(operand);
+        // printOperation(" ", operand);
         content = result;
     }
 
@@ -396,6 +405,7 @@ EQUAL.onclick = function() {
     }
     else if (operation.length === 2) {
         operation.push(content);
+        printOperation(" " + content);
         firstNum = operation[0];
         operationOperand = operation[1];
         secondNum = operation[2];
@@ -421,4 +431,9 @@ EQUAL.onclick = function() {
         console.log(operation);
         reassignResult(content);
     }
+}
+
+const OPERATION_SHOW = document.getElementById("operation-content");
+function printOperation(line) {
+    OPERATION_SHOW.innerHTML += line;
 }

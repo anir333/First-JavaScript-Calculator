@@ -405,7 +405,7 @@ EQUAL.onclick = function() {
     }
     else if (operation.length === 2) {
         operation.push(content);
-        printOperation(" " + content);
+        printOperation(" " + content + "; ");
         firstNum = operation[0];
         operationOperand = operation[1];
         secondNum = operation[2];
